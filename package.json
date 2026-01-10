@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "build": "tsc -p . && esbuild out/main.js --bundle --outfile=dist/bundle.js --format=iife",
-    "prestart": "npm run build",
-    "start": "node out/main.js",
+    "start": "serve -s . -l $PORT",
     "heroku-postbuild": "npm run build"
   },
+  "dependencies": {
+    "serve": "^14.1.1"
+  },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "esbuild": "^0.20.0"
+    "esbuild": "^0.27.2",
+    "typescript": "^5.9.3"
   }
 }
