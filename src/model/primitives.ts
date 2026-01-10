@@ -9,6 +9,7 @@ export enum Direction {
     Right
 }
 
-export class Point {
-    constructor(public x: number, public y: number) {}
+export interface Point {
+    x: number;
+    y: number;
 }

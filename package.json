@@ -5,7 +5,8 @@
   "scripts": {
     "build": "tsc -p . && esbuild out/main.js --bundle --outfile=dist/bundle.js --format=iife",
     "prestart": "npm run build",
-    "start": "node out/main.js"
+    "start": "node out/main.js",
+    "heroku-postbuild": "npm run build",
   },
   "devDependencies": {
     "typescript": "^5.9.3",
